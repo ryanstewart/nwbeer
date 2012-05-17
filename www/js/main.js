@@ -4,14 +4,6 @@
 
 /*global $, document, window, console, Camera, navigator */
 
-function onDeviceReady() {
-    'use strict';
-    navigator.alert("PG ready");
-    $("#mainpage").append("<div>Brah!!!</div>");
-}
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
 
 function onSuccess(imageData) {
 	'use strict';
@@ -42,6 +34,21 @@ function getCamera() {
 
 	navigator.camera.getPicture(onSuccess, onFail, options);
 }
+
+function onDeviceReady() {
+    'use strict';
+    navigator.alert("PG ready");
+    
+    var $cameradiv = $("<div id='camera-button'>");
+    $cameradiv.addClass("iconButton");
+    $cameradiv.on("click", function (e) {
+        getCamera();
+    });
+    
+    $("#mainpage").append($cameradiv);
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
 
 $(document).ready(function () {
     'use strict';
