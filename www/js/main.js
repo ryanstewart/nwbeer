@@ -41,6 +41,7 @@ function onDeviceReady() {
     
     var $cameradiv = $("<div id='camera-button'>");
     $cameradiv.addClass("iconButton");
+    $cameradiv.append("Send Beer Photo");
     $cameradiv.on("click", function (e) {
         getCamera();
     });
