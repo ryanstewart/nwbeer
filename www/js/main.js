@@ -4,18 +4,9 @@
 
 /*global $, document, window, console, Camera, navigator */
 
-
 function onSuccess(imageData) {
 	'use strict';
-
-
-    var image = document.getElementById('image');
-    image.src = imageData;
-    
-	document.getElementById('takephoto').className = 'animate';
-	document.getElementById('photodetail').className = 'animate';
-	
-    // image.src = "data:image/jpeg;base64," + imageData;
+    console.log("success");
 }
 
 function onFail(error) {
@@ -37,6 +28,7 @@ function getCamera() {
 
 function onDeviceReady() {
     'use strict';
+
     navigator.alert("PG ready");
     
     var $cameradiv = $("<div id='camera-button'>");
@@ -49,7 +41,9 @@ function onDeviceReady() {
     $("#mainpage").append($cameradiv);
 }
 
-document.addEventListener("deviceready", onDeviceReady, false);
+function init() {
+    document.addEventListener("deviceready", onDeviceReady, false);    
+}
 
 $(document).ready(function () {
     'use strict';
