@@ -37,7 +37,7 @@ function getCamera() {
 function onDeviceReady() {
     'use strict';
     
-    $("#mainview").append("<div>Brah!!!</div>");
+    $("#mainpage").append("<div>Brah!!!</div>");
 }
 
 $(document).ready(function () {
