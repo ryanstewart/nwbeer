@@ -59,7 +59,7 @@ $(document).ready(function () {
     });
 
     $(document).on('deviceready', function (e) {
-
+        $("mainpage").append("<div>Testing!</div>");
     });
     
 });
