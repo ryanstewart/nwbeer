@@ -69,6 +69,8 @@ $(document).ready(function () {
         $("#content").css("left", -viewportWidth * 6);
     });
     
+    onDeviceReady();
+    
 });
 
 
