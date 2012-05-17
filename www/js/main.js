@@ -28,6 +28,10 @@ $(document).ready(function () {
         $("#content").css("left", -viewportWidth * 6);
     });
     
+    $("#header").on("click", function (e) {
+        $("#content").css("left", 0);
+    });
+    
 });
 
 
