@@ -4,6 +4,15 @@
 
 /*global $, document, window, console, Camera, navigator */
 
+function onDeviceReady() {
+    'use strict';
+    navigator.alert("PG ready");
+    $("#mainpage").append("<div>Brah!!!</div>");
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+
 function onSuccess(imageData) {
 	'use strict';
 
@@ -34,12 +43,6 @@ function getCamera() {
 	navigator.camera.getPicture(onSuccess, onFail, options);
 }
 
-function onDeviceReady() {
-    'use strict';
-    navigator.alert("PG ready");
-    $("#mainpage").append("<div>Brah!!!</div>");
-}
-
 $(document).ready(function () {
     'use strict';
     
@@ -63,8 +66,6 @@ $(document).ready(function () {
     $(".the-mountainbeers").on("click", function (e) {
         $("#content").css("left", -viewportWidth * 6);
     });
-
-    document.addEventListener("deviceready", onDeviceReady, false);
     
 });
 
