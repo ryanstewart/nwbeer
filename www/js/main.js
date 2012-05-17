@@ -28,8 +28,6 @@ function getCamera() {
 
 function onDeviceReady() {
     'use strict';
-
-    navigator.alert("PG ready");
     
     var $cameradiv = $("<div id='camera-button'>");
     $cameradiv.addClass("iconButton");
