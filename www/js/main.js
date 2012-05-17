@@ -36,7 +36,7 @@ function getCamera() {
 
 function onDeviceReady() {
     'use strict';
-    
+    navigator.alert("PG ready");
     $("#mainpage").append("<div>Brah!!!</div>");
 }
 
