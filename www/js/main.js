@@ -34,6 +34,12 @@ function getCamera() {
 	navigator.camera.getPicture(onSuccess, onFail, options);
 }
 
+function onDeviceReady() {
+    'use strict';
+    
+    $("#mainview").append("<div>Brah!!!</div>");
+}
+
 $(document).ready(function () {
     'use strict';
     
@@ -58,9 +64,7 @@ $(document).ready(function () {
         $("#content").css("left", -viewportWidth * 6);
     });
 
-    $(document).on('deviceready', function (e) {
-        $("#mainpage").append("<div>Testing!</div>");
-    });
+    document.addEventListener("deviceready", onDeviceReady, false);
     
 });
 
